@@ -1,0 +1,27 @@
+{
+  "members": [
+    {
+      "id": "ungappanperu",
+      "name": "sree",
+      "dept": "",
+      "createdAt": "2026-03-09T14:19:39.211Z"
+    }
+  ],
+  "records": [
+    {
+      "memberId": "ungappanperu",
+      "date": "2026-03-09",
+      "status": "present",
+      "time": "19:49"
+    }
+  ],
+  "activities": [
+    {
+      "name": "sree",
+      "status": "present",
+      "time": "19:49",
+      "date": "2026-03-09"
+    }
+  ],
+  "mode": "office"
+}

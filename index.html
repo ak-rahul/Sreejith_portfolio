@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sreejith M R | Writer & Media Professional</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css?v=2">
+    <!-- Icons (Lucide) -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- CSV Parser (PapaParse) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-container container">
+            <a href="#" class="brand-logo">Sreejith M R</a>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#recent">Recent</a></li>
+                <li><a href="#works">Works</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#college">College Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Theme">
+                    <i data-lucide="sun" class="sun"></i>
+                    <i data-lucide="moon" class="moon"></i>
+                </button>
+                <div class="menu-toggle" id="mobile-menu">
+                    <i data-lucide="menu"></i>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="home" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content container" data-reveal>
+            <h1>Sreejith.M.R</h1>
+            <p class="tagline" id="typewriter-text">Writer | Media Professional | PR & Communication Analyst</p>
+        </div>
+        <div class="scroll-down">
+            <i data-lucide="chevron-down"></i>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- About Section -->
+        <section id="about" class="about">
+            <div class="container">
+                <div class="about-grid">
+                    <div class="about-image" data-reveal>
+                        <img src="Profile Photo.jpeg" alt="Sreejith M R">
+
+                    </div>
+                    <div class="about-text" data-reveal>
+                        <h2>About Me</h2>
+                        <p>I'm a writer and media professional with a passion for storytelling across multiple
+                            platforms. My work spans creative writing, public relations, and communication analysis,
+                            bringing a unique perspective to both narrative craft and strategic communication.</p>
+                        <p>Currently pursuing my studies while working as a PR and Communication Analyst, I've developed
+                            expertise in crafting compelling narratives for diverse audiences. Whether it's creative
+                            fiction, brand communication, or strategic messaging, I approach each project with
+                            dedication to authenticity and impact.</p>
+
+                        <div class="about-stats">
+                            <div class="stat-item">
+                                <i data-lucide="book-open"></i>
+                                <h3 data-target="12">0</h3>
+                                <p>Published Works</p>
+                            </div>
+                            <div class="stat-item">
+                                <i data-lucide="award"></i>
+                                <h3 data-target="5">0</h3>
+                                <p>Awards Won</p>
+                            </div>
+                            <div class="stat-item">
+                                <i data-lucide="pen"></i>
+                                <h3 data-target="10">0</h3>
+                                <p>Years Experience</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </section>
+
+        <!-- Experience & Education Section -->
+        <section id="experience" class="experience">
+            <div class="container">
+                <div class="section-header" data-reveal>
+                    <h2>Experience & Education</h2>
+                    <p>My professional journey and academic background in media, communication, and writing</p>
+                </div>
+
+                <div class="experience-grid">
+                    <!-- Column 1: Experience -->
+                    <div class="timeline-column" data-reveal>
+                        <h3 class="timeline-title"><i data-lucide="briefcase"></i> Professional Experience</h3>
+
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content card">
+                                <div class="timeline-meta">
+                                    <span class="tag">Current</span>
+                                    <span class="timeline-date">2024 - Present</span>
+                                </div>
+                                <h4>PR & Communication Analyst</h4>
+                                <h5>MediaTech Solutions <span class="timeline-location">• Remote</span></h5>
+                                <ul>
+                                    <li>Develop and execute strategic communication plans for tech clients</li>
+                                    <li>Manage media relations and craft compelling press releases</li>
+                                    <li>Analyze communication metrics and provide insights for campaign optimization
+                                    </li>
+                                    <li>Coordinate crisis communication strategies and stakeholder engagement</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content card">
+                                <div class="timeline-meta">
+                                    <span class="timeline-date">2023 - 2024</span>
+                                </div>
+                                <h4>Communication Intern</h4>
+                                <h5>Digital Media Agency <span class="timeline-location">• Mumbai, India</span></h5>
+                                <ul>
+                                    <li>Assisted in developing content strategies for social media campaigns</li>
+                                    <li>Conducted media monitoring and prepared daily news briefings</li>
+                                    <li>Supported event coordination and press conference logistics</li>
+                                    <li>Created communication materials including newsletters and blog posts</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content card">
+                                <div class="timeline-meta">
+                                    <span class="tag">Current</span>
+                                    <span class="timeline-date">2022 - Present</span>
+                                </div>
+                                <h4>Freelance Writer</h4>
+                                <h5>Self-Employed <span class="timeline-location">• Remote</span></h5>
+                                <ul>
+                                    <li>Write creative fiction, essays, and articles for various publications</li>
+                                    <li>Collaborate with editors on story development and revisions</li>
+                                    <li>Build portfolio of published works across multiple genres</li>
+                                    <li>Engage with literary community through workshops and readings</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Column 2: Education & Skills -->
+                    <div class="timeline-column" data-reveal>
+                        <h3 class="timeline-title"><i data-lucide="graduation-cap"></i> Education</h3>
+
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content card">
+                                <div class="timeline-meta">
+                                    <span class="tag">Current</span>
+                                    <span class="timeline-date">2022 - Present</span>
+                                </div>
+                                <h4>Bachelor of Arts in Media & Communication</h4>
+                                <h5>University Name <span class="timeline-location">• City, India</span></h5>
+                                <p>Specialization in Strategic Communication and Public Relations. Relevant coursework
+                                    includes Crisis Communication, Media Ethics, Digital Marketing, and Creative
+                                    Writing.</p>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content card">
+                                <div class="timeline-meta">
+                                    <span class="timeline-date">2020 - 2022</span>
+                                </div>
+                                <h4>Higher Secondary Certificate</h4>
+                                <h5>High School Name <span class="timeline-location">• City, India</span></h5>
+                                <p>Completed with focus on Humanities and Languages. Actively participated in debate
+                                    club, literary magazine, and drama society.</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="skills-section" data-reveal style="margin-top: 5rem;">
+                    <h3 class="timeline-title" style="justify-content: center; margin-bottom: 2rem;"><i
+                            data-lucide="zap"></i> Key Skills</h3>
+                    <div class="skills-container card" style="display: flex; justify-content: center; padding: 2rem;">
+                        <div class="skill-tags" style="justify-content: center; max-width: 800px;">
+                            <span class="skill-tag">Strategic Communication</span>
+                            <span class="skill-tag">Public Relations</span>
+                            <span class="skill-tag">Crisis Management</span>
+                            <span class="skill-tag">Creative Writing</span>
+                            <span class="skill-tag">Content Strategy</span>
+                            <span class="skill-tag">Media Relations</span>
+                            <span class="skill-tag">Social Media Management</span>
+                            <span class="skill-tag">Communication Analysis</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Recent Works Section -->
+        <section id="recent" class="recent bg-alt">
+            <div class="container">
+                <div class="section-header" data-reveal>
+                    <h2>Recent Works</h2>
+                    <p>Latest articles, stories, and insights from my ongoing work</p>
+                </div>
+                <!-- Dynamic Article Container -->
+                <div id="articles-container" class="recent-grid">
+                    <!-- Cards will be injected here by script.js -->
+                </div>
+
+                <!-- Load More Button -->
+                <div class="load-more-container" id="load-more-container"
+                    style="display: none; text-align: center; margin-top: 3rem;" data-reveal>
+                    <button id="load-more-btn" class="btn btn-primary">View More <i data-lucide="chevron-down"
+                            style="margin-left: 8px;"></i></button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Works Section -->
+        <section id="works" class="works">
+            <div class="container">
+                <div class="section-header" data-reveal>
+                    <h2>Featured Works</h2>
+                    <p>A selection of my published works spanning fiction, essays, and poetry.</p>
+                </div>
+                <div class="works-grid">
+                    <article class="card" data-reveal>
+                        <a href="Uploads/Featured Works/An engaging excursion with fisherfolk.jpg.jpeg" target="_blank"
+                            class="card-img-link">
+                            <div class="card-img">
+                                <img src="Uploads/Featured Works/An engaging excursion with fisherfolk.jpg.jpeg"
+                                    alt="An engaging excursion with fisherfolk">
+                            </div>
+                        </a>
+                        <div class="card-content">
+                            <div class="card-meta">
+                                <span>Featured</span>
+                                <span class="tag">Article</span>
+                            </div>
+                            <h3>An engaging excursion with fisherfolk</h3>
+                            <a href="Uploads/Featured Works/An engaging excursion with fisherfolk.jpg.jpeg"
+                                target="_blank" class="card-link">View Project <i data-lucide="external-link"></i></a>
+                        </div>
+                    </article>
+
+                    <article class="card" data-reveal>
+                        <a href="Uploads/Featured Works/Beautiful game, bountiful tales told by Sparhsanam Arts.jpg.jpeg"
+                            target="_blank" class="card-img-link">
+                            <div class="card-img">
+                                <img src="Uploads/Featured Works/Beautiful game, bountiful tales told by Sparhsanam Arts.jpg.jpeg"
+                                    alt="Beautiful game, bountiful tales told by Sparhsanam Arts">
+                            </div>
+                        </a>
+                        <div class="card-content">
+                            <div class="card-meta">
+                                <span>Featured</span>
+                                <span class="tag">Article</span>
+                            </div>
+                            <h3>Beautiful game, bountiful tales told by Sparhsanam Arts</h3>
+                            <a href="Uploads/Featured Works/Beautiful game, bountiful tales told by Sparhsanam Arts.jpg.jpeg"
+                                target="_blank" class="card-link">View Project <i data-lucide="external-link"></i></a>
+                        </div>
+                    </article>
+
+                    <article class="card" data-reveal>
+                        <a href="Uploads/Featured Works/Entering the virtual war with all guns blazing.jpg.jpeg"
+                            target="_blank" class="card-img-link">
+                            <div class="card-img">
+                                <img src="Uploads/Featured Works/Entering the virtual war with all guns blazing.jpg.jpeg"
+                                    alt="Entering the virtual war with all guns blazing">
+                            </div>
+                        </a>
+                        <div class="card-content">
+                            <div class="card-meta">
+                                <span>Featured</span>
+                                <span class="tag">Article</span>
+                            </div>
+                            <h3>Entering the virtual war with all guns blazing</h3>
+                            <a href="Uploads/Featured Works/Entering the virtual war with all guns blazing.jpg.jpeg"
+                                target="_blank" class="card-link">View Project <i data-lucide="external-link"></i></a>
+                        </div>
+                    </article>
+
+                    <article class="card" data-reveal>
+                        <a href="Uploads/Featured Works/Kochi-based homemaker transforms flair for carpentry into thriving profession.jpg.jpeg"
+                            target="_blank" class="card-img-link">
+                            <div class="card-img">
+                                <img src="Uploads/Featured Works/Kochi-based homemaker transforms flair for carpentry into thriving profession.jpg.jpeg"
+                                    alt="Kochi-based homemaker transforms flair for carpentry into thriving profession">
+                            </div>
+                        </a>
+                        <div class="card-content">
+                            <div class="card-meta">
+                                <span>Featured</span>
+                                <span class="tag">Article</span>
+                            </div>
+                            <h3>Kochi-based homemaker transforms flair for carpentry into thriving profession</h3>
+                            <a href="Uploads/Featured Works/Kochi-based homemaker transforms flair for carpentry into thriving profession.jpg.jpeg"
+                                target="_blank" class="card-link">View Project <i data-lucide="external-link"></i></a>
+                        </div>
+                    </article>
+
+                    <article class="card" data-reveal>
+                        <a href="Uploads/Featured Works/Malayali students raring to rove on Mars.jpg.jpeg"
+                            target="_blank" class="card-img-link">
+                            <div class="card-img">
+                                <img src="Uploads/Featured Works/Malayali students raring to rove on Mars.jpg.jpeg"
+                                    alt="Malayali students raring to rove on Mars">
+                            </div>
+                        </a>
+                        <div class="card-content">
+                            <div class="card-meta">
+                                <span>Featured</span>
+                                <span class="tag">Article</span>
+                            </div>
+                            <h3>Malayali students raring to rove on Mars</h3>
+                            <a href="Uploads/Featured Works/Malayali students raring to rove on Mars.jpg.jpeg"
+                                target="_blank" class="card-link">View Project <i data-lucide="external-link"></i></a>
+                        </div>
+                    </article>
+
+                    <article class="card" data-reveal>
+                        <a href="Uploads/Featured Works/Soulful solace at Aluva Manappuram.jpg.jpeg" target="_blank"
+                            class="card-img-link">
+                            <div class="card-img">
+                                <img src="Uploads/Featured Works/Soulful solace at Aluva Manappuram.jpg.jpeg"
+                                    alt="Soulful solace at Aluva Manappuram">
+                            </div>
+                        </a>
+                        <div class="card-content">
+                            <div class="card-meta">
+                                <span>Featured</span>
+                                <span class="tag">Article</span>
+                            </div>
+                            <h3>Soulful solace at Aluva Manappuram</h3>
+                            <a href="Uploads/Featured Works/Soulful solace at Aluva Manappuram.jpg.jpeg" target="_blank"
+                                class="card-link">View Project <i data-lucide="external-link"></i></a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- College Projects Section -->
+        <section id="college" class="college bg-alt">
+            <div class="container">
+                <div class="section-header" data-reveal>
+                    <h2>College Projects</h2>
+                    <p>Academic work and reports from my college years. Click on any title to view the full PDF.</p>
+                </div>
+                <!-- Dynamic PDF List -->
+                <div id="college-pdfs-container" class="college-list-container" data-reveal>
+                    <ul id="college-pdf-list" class="pdf-list">
+                        <!-- List items will be injected here by script.js -->
+                        <li class="loading">Loading projects...</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact">
+            <div class="container">
+                <div class="section-header" data-reveal>
+                    <h2>Get In Touch</h2>
+                    <p>I'm always interested in new opportunities, collaborations, or just a good conversation about
+                        writing.</p>
+                </div>
+                <div class="contact-grid">
+                    <div class="contact-info" data-reveal>
+                        <h3>Connect With Me</h3>
+                        <div class="social-links">
+                            <a href="#"><i data-lucide="twitter"></i> Twitter</a>
+                            <a href="#"><i data-lucide="linkedin"></i> LinkedIn</a>
+                            <a href="#"><i data-lucide="instagram"></i> Instagram</a>
+                            <a href="mailto:contact@sreejithmr.com"><i data-lucide="mail"></i> Email</a>
+                        </div>
+                        <div class="office-hours">
+                            <h4>Office Hours</h4>
+                            <p>Monday - Friday<br>9:00 AM - 5:00 PM</p>
+                        </div>
+                    </div>
+                    <form class="contact-form" data-reveal>
+                        <div class="form-group">
+                            <label>Name</label>
+                            <input type="text" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Email</label>
+                            <input type="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Message</label>
+                            <textarea rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Sreejith M R. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+
+</html>
