@@ -234,9 +234,7 @@ p {
 .hero-content {
     position: relative;
     z-index: 10;
-    width: 26vw;
-    min-width: 280px;
-    max-width: 380px;
+    width: 100%;
     margin-top: -8vh;
     /* Shift up to center correctly on the paper */
 }
@@ -260,12 +258,14 @@ p {
     margin-bottom: 2rem;
     color: #333333;
     font-weight: 600;
-    max-width: 100%;
+    width: 26vw;
+    min-width: 280px;
+    max-width: 380px;
     margin-left: auto;
     margin-right: auto;
     letter-spacing: 0.5px;
-    display: inline;
-    /* Keep on same line as cursor */
+    display: inline-block;
+    text-align: center;
 }
 
 /* Typewriter Cursor */
@@ -276,6 +276,7 @@ p {
     animation: blink 0.8s infinite;
     margin-left: 2px;
     font-size: clamp(0.9rem, 1.2vw, 1.1rem);
+    display: inline-block;
 }
 
 @keyframes blink {
@@ -714,7 +715,7 @@ section {
 /* Contact Section */
 .contact-grid {
     display: grid;
-    grid-template-columns: 1fr 1.5fr;
+    grid-template-columns: 1fr;
     gap: 4rem;
 }
 

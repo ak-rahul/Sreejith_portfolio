@@ -138,30 +138,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Form Submission Mock-up
-    const contactForm = document.querySelector('.contact-form');
-    if (contactForm) {
-        contactForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            const btn = contactForm.querySelector('button');
-            const originalText = btn.innerText;
-
-            btn.innerText = "Sending...";
-            btn.disabled = true;
-
-            setTimeout(() => {
-                btn.innerText = "Message Sent!";
-                btn.classList.add('success');
-                contactForm.reset();
-
-                setTimeout(() => {
-                    btn.innerText = originalText;
-                    btn.classList.remove('success');
-                    btn.disabled = false;
-                }, 3000);
-            }, 1500);
-        });
-    }
+    // Form Submission Mock-up removed
 
     // Load Articles dynamically from Medium using RSS via proxy
     let allArticles = [];
@@ -320,86 +297,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     loadArticles();
 
-    // Dynamically load College Works PDFs from the uploads folder
-    const loadCollegeWorks = async () => {
-        const listElement = document.getElementById('college-pdf-list');
-        if (!listElement) return;
-
-        try {
-            // Fetch the directory listing from http-server
-            // We use a cache-buster to ensure we get the latest file list
-            const response = await fetch(`Uploads/College%20Works/?t=${Date.now()}`);
-            if (!response.ok) throw new Error('Failed to fetch college works directory');
-
-            const htmlText = await response.text();
-
-            // Parse the HTML returned by http-server
-            const parser = new DOMParser();
-            const doc = parser.parseFromString(htmlText, 'text/html');
-
-            // Find all links that end with .pdf (case-insensitive)
-            // http-server usually lists files as <a> tags with hrefs
-            const links = Array.from(doc.querySelectorAll('a'))
-                .map(a => a.getAttribute('href'))
-                .filter(href => {
-                    if (!href) return false;
-                    // Filter out parent directories or other types
-                    const decoded = decodeURIComponent(href);
-                    return decoded.toLowerCase().endsWith('.pdf') && !decoded.includes('../');
-                });
-
-            if (links.length === 0) {
-                listElement.innerHTML = '<li class="loading">No college projects found.</li>';
-                return;
-            }
-
-            // Clear the "Loading..." message
-            listElement.innerHTML = '';
-
-            links.forEach(href => {
-                // Decode URI component to get readable filename
-                let filename = decodeURIComponent(href);
-                // The structure from http-server might be just the name or a path
-                // We want just the name for display
-                let displayName = filename.split('/').pop().replace(/\.pdf$/i, '');
-
-                const li = document.createElement('li');
-                li.className = 'pdf-item';
-                li.setAttribute('data-reveal', '');
-
-                li.innerHTML = `
-                    <a href="Uploads/College%20Works/${href}" target="_blank">
-                        <i data-lucide="file-text" class="pdf-icon"></i>
-                        <span class="pdf-name">${displayName}</span>
-                        <i data-lucide="external-link" class="external-icon"></i>
-                    </a>
-                `;
-
-                listElement.appendChild(li);
-            });
-
-            // Initialize icons for new elements
-            if (window.lucide) {
-                lucide.createIcons();
-            }
-
-            // Trigger reveal for new elements
-            const newElements = listElement.querySelectorAll('[data-reveal]');
-            const windowHeight = window.innerHeight;
-            newElements.forEach(el => {
-                const elementTop = el.getBoundingClientRect().top;
-                if (elementTop < windowHeight * 0.9) {
-                    el.classList.add('active');
-                }
-            });
-
-        } catch (error) {
-            console.error('Error loading college works:', error);
-            listElement.innerHTML = '<li class="error-msg">Failed to load projects. Please refresh.</li>';
-        }
-    };
-
-    loadCollegeWorks();
+    // Dynamically load College Works PDFs removed since it's now static
 });
 
 // Typewriter Effect
@@ -411,15 +309,25 @@ const typeWriter = (elementId, speed = 100) => {
     element.innerText = '';
     let i = 0;
 
+    // Add a container for text and cursor to keep them together and centered
+    const container = document.createElement('span');
+    container.style.display = 'inline-block';
+
+    // Add a span for the text itself
+    const textSpan = document.createElement('span');
+
     // Add a cursor element
     const cursor = document.createElement('span');
     cursor.className = 'typewriter-cursor';
     cursor.innerHTML = '|';
-    element.parentNode.insertBefore(cursor, element.nextSibling);
+
+    container.appendChild(textSpan);
+    container.appendChild(cursor);
+    element.appendChild(container);
 
     const typing = () => {
         if (i < text.length) {
-            element.innerHTML += text.charAt(i);
+            textSpan.innerHTML += text.charAt(i);
             i++;
             setTimeout(typing, speed);
         } else {
