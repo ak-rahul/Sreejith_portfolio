@@ -140,7 +140,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Form Submission Mock-up removed
 
-    // Load Articles dynamically from Medium using RSS via proxy
+    // Load Articles dynamically from Medium using RSS via codetabs proxy
     let allArticles = [];
     let currentArticleIndex = 0;
     const articlesPerLoad = 3;
@@ -215,7 +215,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Append to container instead of replacing, so "Load More" adds to existing cards
         container.insertAdjacentHTML('beforeend', htmlString);
-        lucide.createIcons();
+
+        if (window.lucide) {
+            lucide.createIcons();
+        }
 
         // Trigger reveal animation for newly added cards
         setTimeout(() => {
@@ -223,9 +226,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const windowHeight = window.innerHeight;
             unrevealedElements.forEach(el => {
                 const elementTop = el.getBoundingClientRect().top;
-                // Add active immediately if in view, otherwise it'll be caught by the scroll listener
-                if (elementTop < windowHeight * 0.85 || true) { // Force immediately for newly appended
-                    // small delay for DOM to register the new CSS class transition
+                if (elementTop < windowHeight * 0.85 || true) {
                     setTimeout(() => el.classList.add('active'), 50);
                 }
             });
@@ -248,7 +249,6 @@ document.addEventListener('DOMContentLoaded', () => {
         const container = document.getElementById('articles-container');
         if (!container) return;
 
-        // Replace this with your actual Medium username
         const mediumUsername = 'sreejthmr1000';
         const apiUrl = `https://api.codetabs.com/v1/proxy?quest=https://medium.com/feed/@${mediumUsername}`;
 
